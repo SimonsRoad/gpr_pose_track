@@ -1,7 +1,7 @@
-function plot_samples_mean_bounds(fig,x,y,mean_pred,sigma_pred)
-% Plots a picture given true x, true y, mean prediction and sigma bounds
+function plot_samples_mean_bounds(fig,gt_data,x,mean_pred,sigma_pred)
+% Plots a picture given ground truth data (x,y), input x, mean prediction and sigma bounds
 set(fig,'defaulttextinterpreter','latex');
-h1 = plot(x,y,'+',...
+h1 = plot(gt_data(:,1),gt_data(:,2),'+',...
     x,mean_pred,'g-',...
     x,mean_pred+2*sigma_pred,'r--','Linewidth',3);
 hold on;

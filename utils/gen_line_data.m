@@ -8,27 +8,31 @@ function data = gen_line_data(m,c,noise_var,num_samples,add_quadratic)
 % add_quadratic - If we should add some quadractic noise
 
 % Passing in default arguments
+% Setting default values
+def_num_samples = 15;
+def_add_quadratic = 0.005;
+
 switch nargin
     case 0
         m = 1;
         c = 0;
         noise_var = 10;
-        num_samples = 30;
-        add_quadratic = 0.005;
+        num_samples = def_num_samples;
+        add_quadratic = def_add_quadratic;
     case 1
         c = 0;
         noise_var = 10;
-        num_samples = 30;
-        add_quadratic = 0.005;
+        num_samples = def_num_samples;
+        add_quadratic = def_add_quadratic;
     case 2
         noise_var = 10;
-        num_samples = 30;
-        add_quadratic = 0.005;
+        num_samples = def_num_samples;
+        add_quadratic = def_add_quadratic;
     case 3
-        num_samples = 30;
-        add_quadratic = 0.01;
+        num_samples = def_num_samples;
+        add_quadratic = def_add_quadratic;
     case 4
-        add_quadratic = 0.005;
+        add_quadratic = def_add_quadratic;
 end
 
 % Generating noise samples
